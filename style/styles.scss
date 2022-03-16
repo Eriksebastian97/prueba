@@ -1,0 +1,50 @@
+$redes:(
+   gato:#55acee,
+   perro:#23b421,
+   tigre:#41238b85,
+);
+
+@each $color in $redes{
+    .#{$red} {
+background-color: $color;
+
+    }
+    
+    
+}
+
+
+
+.animal{
+    border: 5px red;
+    background-color: aqua; 
+}
+
+.animal--perro{
+    @extend .animal; 
+    border-radius: 5pz;
+}
+
+
+.animal--gato{
+    @extend .animal;
+    border: 5px solid orange;
+}
+
+.animal--tigre{
+    @extend .animal;
+    border: 5px solid blue ;
+}
+
+
+
+@mixin size ( width , height){
+    height: height;
+    width: width;
+}
+
+.mixin_ejemplo{
+    @include size(300px, 50px);
+    background-color: greenyellow;
+
+}
